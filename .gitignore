@@ -1,0 +1,26 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ambiente
+.env
+
+# Banco (se houver arquivos locais)
+*.sqlite
+*.db
+
+# Sistema e IDEs
+.DS_Store
+.vscode/
+*.swp
+Thumbs.db
+
+# Build/Cache
+dist/
+build/
+.cache/
