@@ -20,7 +20,7 @@ module.exports = {
       port: '3306',
       database: 'sistestdb',
       user:     'root',
-      password: '123'
+      password: 'Liam2025!'
     },
     pool: {
       min: 2,
