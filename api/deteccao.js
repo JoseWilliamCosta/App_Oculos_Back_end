@@ -56,7 +56,7 @@ module.exports = app => {
             }
 
         } catch (err) {
-            console.error(err);
+            console.error('ERRO NO BACKEND:', err);
             return res.status(500).json({
                 msg: '',
                 msg_erro: err.message,

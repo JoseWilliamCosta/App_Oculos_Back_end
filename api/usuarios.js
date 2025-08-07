@@ -3,6 +3,19 @@ module.exports = app => {
         const ACAO = "Cadastro"
         console.log('signup')
 
+        // Validação simples de campos obrigatórios
+        if (!req.body.nome?.trim() ||
+            !req.body.cpf?.trim() ||
+            !req.body.telefone?.trim() ||
+            !req.body.email?.trim() ||
+            !req.body.password?.trim()) {
+            return res.status(400).json({
+                msg: "",
+                msg_erro: "Todos os campos obrigatórios devem ser preenchidos",
+                num_erro: 1
+            });
+        }
+
         app.db('usuarios')
             .insert({
                 nome: req.body.nome,
@@ -92,7 +105,7 @@ module.exports = app => {
         console.log('updateUsuario')
 
         app.db('usuarios')
-        .where({idusuario: req.body.idusuario})
+            .where({ idusuario: req.body.idusuario })
             .update({
                 nome: req.body.nome,
                 cpf: req.body.cpf,
